@@ -26,4 +26,6 @@ urlpatterns = [
     # Local apps
     path('', include('pages.urls')), #new
 
+    # blog app
+    path('blog/', include('blog.urls')),
 ]
