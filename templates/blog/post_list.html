@@ -1,3 +1,30 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+
+{% block title %}Blog Nikodema{% endblock title %}
+
+{% block content %}
+<h1>Blog Nikodema</h1>
+
+       {% for post in posts %}
+            <div class="post">
+                <p class="date">published: {{ post.published_date }}</p>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p class="lead">{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
+{% if user.is_authenticated %}
+
+{% else %}
+
+
+    {% endif %}
+{% endblock content %}
+
+{% comment %} 
 <html>
     <head>
         <title>Django Girls blog</title>
@@ -7,13 +34,16 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
 
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-        
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+                
     </body>
-</html>
+</html> 
+{% endcomment %}
+
+<!-- templates/home.html -->
