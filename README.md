@@ -1,6 +1,11 @@
 # Aplikacje Internetowe
 
 ## LAB2. Rejestracja użytkowników
+https://nikodem-site.herokuapp.com/
+- Użyłem django-allauth
+- Stworzyłem widoki : logout, login, zmiana hasła oraz resetu hasła
+- Użyłem gmail SMTP do wysyłania maili z linkem resetującym hasła.
+- Skorzystałem z crispy forms
 
 Moja strona
   ![strona głóna](/scr/1.PNG)
