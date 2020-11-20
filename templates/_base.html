@@ -19,7 +19,12 @@
       font-weight-normal">Nikodem Wrosz</a>
       <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="{% url 'post_list' %}">Blog</a>
-        <a class="p-2 text-dark" href="{% url 'about' %}">About</a>
+        
+        {% if user.is_authenticated %}
+
+        <a class="p-2 text-dark" href="{% url 'about' %}">Ustawienia Konta</a>
+        
+        {% endif %}
 
         {% if user.is_authenticated %}
           <a class="p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>

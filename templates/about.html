@@ -3,6 +3,11 @@
 {% block title %}About{% endblock title %}
 
 {% block content %}
-<h1>About Page</h1>
+<h1>Ustawienia konta</h1>
+
+
+<a href="{% url 'account_change_password' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Zmień Hasło</a>
+
+
 {% endblock content %}
 
