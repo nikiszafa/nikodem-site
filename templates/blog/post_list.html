@@ -6,8 +6,12 @@
 {% block title %}Blog Nikodema{% endblock title %}
 
 {% block content %}
-<h1>Blog Nikodema</h1>
 
+{% if user.is_authenticated %}
+<a href="{% url 'post_new' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Dodaj nowy post</a>
+{% endif %}
+
+<h1>Blog Nikodema</h1>
        {% for post in posts %}
             <div class="post">
                 <p class="date">published: {{ post.published_date }}</p>
@@ -23,27 +27,3 @@
 
     {% endif %}
 {% endblock content %}
-
-{% comment %} 
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-        {% endfor %}
-                
-    </body>
-</html> 
-{% endcomment %}
-
-<!-- templates/home.html -->
