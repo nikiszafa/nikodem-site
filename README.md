@@ -1,7 +1,9 @@
 # Aplikacje Internetowe
 
 ## LAB2. Rejestracja użytkowników
+Link do strony na HEROKU:
 https://nikodem-site.herokuapp.com/
+
 - Użyłem django-allauth
 - Stworzyłem widoki : logout, login, zmiana hasła oraz resetu hasła
 - Użyłem gmail SMTP do wysyłania maili z linkem resetującym hasła.
