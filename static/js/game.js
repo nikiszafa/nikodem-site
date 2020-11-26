@@ -160,6 +160,8 @@ function draw() {
         if (snakeX == bombs[i].x && snakeY == bombs[i].y) {
             window.alert("BOMBA!!!!!!! \n Koniec gry :( \n Twoj wynik: " + score)
             clearInterval(game);
+            window.location.reload();
+
         }
     }
     // Nowe bomby, co 100 sekund następuje generowanie nowych bomb
@@ -193,6 +195,7 @@ function draw() {
     if (snakeX < box || snakeX > 17 * box || snakeY < 3 * box || snakeY > 17 * box || collision(newHead, snake)) {
         window.alert("Koniec gry :( \n Twoj wynik: " + score)
         clearInterval(game);
+        window.location.reload();
     }
 
     // Wykrywanie kolizji z wężem
