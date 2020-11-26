@@ -6,12 +6,14 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+<canvas id="snake" width="608" height="608"></canvas>
+
 <div class="welcome">
     <h1>Witaj na mojej stronie</h1>
     <p> Nikodem Wrosz </p>
-    <p>
-    <img class="bookcover" src="{% static 'images/amw.png' %}"
-    </p>
+<!--    <p>-->
+<!--    <img class="bookcover" src="{% static 'images/amw.png' %}"-->
+<!--    </p>-->
 {% if user.is_authenticated %}
     <p> Hi {{ user.email }}! </p>
     <p><a href="{% url 'account_logout' %}">Log Out</a></p>
