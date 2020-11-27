@@ -50,7 +50,12 @@ INSTALLED_APPS = [
     'allauth.account', #new
     'allauth.socialaccount', #Lab4
     'allauth.socialaccount.providers.github', #Lab4
-    
+    'allauth.socialaccount.providers.facebook', #Lab4
+    'allauth.socialaccount.providers.twitter', #Lab4
+    'allauth.socialaccount.providers.strava', #Lab4
+
+
+
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
