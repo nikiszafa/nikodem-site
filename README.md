@@ -3,6 +3,7 @@
 ## LAB3. Różne sposoby uwierzytelniania
 Link do strony na HEROKU:
 Logowanie w zakładce "Sign Up"
+
 https://nikodem-site.herokuapp.com/
 
 - Użyłem django-allauth
