@@ -48,8 +48,20 @@ INSTALLED_APPS = [
     'crispy_forms', # new
     'allauth', #new
     'allauth.account', #new
+    'allauth.socialaccount', #Lab4
+    'allauth.socialaccount.providers.github', #Lab4
     
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    }
+}
 
     # django-crispy-forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
@@ -67,6 +79,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend', #new
 )
 
+#ACCOUNT_DEFAULT_HTTP_PROTOCOL='https' #Lab4 to duzo dalo
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #new
 ACCOUNT_SESSION_REMEMBER = True #new remember session
 
@@ -74,6 +88,7 @@ ACCOUNT_USERNAME_REQUIRED = False # new
 ACCOUNT_AUTHENTICATION_METHOD = 'email' # new
 ACCOUNT_EMAIL_REQUIRED = True # new
 ACCOUNT_UNIQUE_EMAIL = True # new
+ACCOUNT_EMAIL_VERIFICATION = 'none' #Lab3
 
 DEFAULT_FROM_EMAIL = 'gitterelosc@gmail.com'
 

@@ -28,4 +28,5 @@ urlpatterns = [
 
     # blog app
     path('blog/', include('blog.urls')),
+
 ]
